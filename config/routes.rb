@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  get    '/users/:id/edit', to: 'users#edit'
-  patch  '/users/:id', to: 'users#update'
+  #get    '/users/:id/edit', to: 'users#edit'
+  #patch  '/users/:id', to: 'users#update'
   resources :users
+  resources :account_activations, only: [:edit]
 end
