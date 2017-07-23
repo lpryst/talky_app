@@ -80,7 +80,7 @@ Rails.application.configure do
   host = 'desolate-cove-42384.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :server         => 'smtp.sendgrid.net',
+    :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
     :user_name      => ENV['SENDGRID_USERNAME'],
